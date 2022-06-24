@@ -1,0 +1,1 @@
+import{_ as e,o,c}from"./index.515e5ee0.js";const t={},r={class:"block shadow flex-center",style:{width:"100%","min-height":"100%",color:"var(--gray)","font-size":"5rem"}};function s(n,a){return o(),c("section",r," To be continued ")}var i=e(t,[["render",s]]);export{i as default};
