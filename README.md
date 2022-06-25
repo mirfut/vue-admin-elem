@@ -74,5 +74,3 @@ Uses
 
 ## License
 [MIT License](https://github.com/mirfut/vue-admin-elem/blob/master/LICENSE)
-
-Copyright	&copy; 2022 Tim Brodskiy
