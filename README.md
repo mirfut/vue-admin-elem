@@ -15,8 +15,11 @@
   <a href="https://github.com/element-plus/element-plus">
     <img src="https://img.shields.io/badge/elementplus-2.2.5-brightgreen.svg" alt="element-ui">
   </a>
-  <a href="https://github.com/1esse/vue-clownfish-admin/blob/master/LICENSE">
+  <a href="https://github.com/mirfut/vue-admin-elem/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license">
+  </a>
+  <a href="https://github.com/mirfut/vue-admin-elem/releases">
+    <img src="https://img.shields.io/github/v/release/mirfut/vue-admin-elem.svg" alt="GitHub release">
   </a>
 </p>
 
