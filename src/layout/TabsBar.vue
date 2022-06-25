@@ -178,15 +178,14 @@ function showTabMenu(e: MouseEvent, tab: RouteLocationNormalizedLoaded) {
     background-color: #f1f1f1;
     background-color: var(--white);
     color: var(--black);
-    border-radius: 0.5rem;
 
     &.active {
-      background-color: var(--blue);
+      background-color: green;
       color: var(--white);
     }
 
     &:hover:not(&.active) {
-      background-color: var(--light-blue);
+      background-color: lightgreen;;
       color: var(--black);
     }
 
