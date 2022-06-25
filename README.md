@@ -73,6 +73,6 @@ Uses
 + preview：preview the built project
 
 ## License
-[MIT License](https://github.com/1esse/vue-clownfish-admin/blob/master/LICENSE)
+[MIT License](https://github.com/mirfut/vue-admin-elem/blob/master/LICENSE)
 
-Copyright	&copy; author original project ZhaoJieXin
+Copyright	&copy; 2022 Tim Brodskiy
