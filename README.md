@@ -18,9 +18,6 @@
   <a href="https://github.com/1esse/vue-clownfish-admin/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license">
   </a>
-  <a href="https://github.com/1esse/vue-clownfish-admin/releases">
-    <img src="https://img.shields.io/github/v/release/1esse/vue-clownfish-admin.svg" alt="GitHub release">
-  </a>
 </p>
 
 ## Intro
