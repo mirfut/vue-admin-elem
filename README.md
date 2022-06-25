@@ -26,23 +26,23 @@
   </a>
 </p>
 
-#### This is element-plus version of vue-clownfish-admin, if you prefer antd as UI toolkit, checokut [here](https://github.com/1esse/vue-clownfish-admin).
+## Intro
+Uses 
+[element-plus](https://github.com/element-plus/element-plus) as UI toolkit,
+[ES2015+](http://es6.ruanyifeng.com/)，
+[typescript](https://www.typescriptlang.org/)，
+[vue3](https://vuejs.org/)，
+[pinia](https://pinia.vuejs.org/)，
+[vue-router](https://router.vuejs.org/)，
+[vite](https://vitejs.dev/)，
 
-## 🐬 Intro
-[vue-clownfish-admin](https://github.com/1esse/vue-clownfish-admin) is a frontend SIMPLE Admin Interfaces. It is based on vue3 and uses [element-plus](https://github.com/element-plus/element-plus) as UI toolkit. The main tech stacks are
-[ES2015+](http://es6.ruanyifeng.com/)，[typescript](https://www.typescriptlang.org/zh/)，[vue3](https://staging-cn.vuejs.org)，[pinia](https://pinia.vuejs.org/)，[vue-router](https://router.vuejs.org/zh/)，[vite](https://cn.vitejs.dev/)，[element-plus](https://github.com/element-plus/element-plus). Understanding and Learning them will help you quickly use this project. Due to this project based on vite and vue3, it only support modern browsers, legacy browsers such as ie can be supported by add polyfill manually(detail see [https://vitejs.dev/guide/build.html#browser-compatibility](https://vitejs.dev/guide/build.html#browser-compatibility)).
-
-+ [preview online](https://1esse.github.io/vue-clownfish-admin-elem)
-
-This project is a pure project and does not integrate any case examples that is not related to this project. There are only a few codes that you may not use, which are only functional examples of this project for reference. Standing on the shoulders of giants, if you are familiar with [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin), then you can get started with this project faster. The architecture implementation of [vue-clownfish-admin](https://github.com/1esse/vue-clownfish-admin) is inspired by it.
-
-## 🦑 Advantage
+## Advantage
 + Tech: Use the latest tech stacks of vue3.
 + Pure: No mockjs, case examples integrated, you can configure freely.
 + Layout: Layout components are decoupled, easy to use and replace it.
 + Lightweight：Less codes, easy to learn and get started quickly.
 
-## 🐳 Features
+## Features
 + Automatically generate sidebar menus based on routing configuration (supports multi-level nesting and external links)
 + Dynamically generate breadcrumbs based on current routing information
 + Navigation tabs (right-click pop-up menu, support page refresh, close)
@@ -55,12 +55,12 @@ This project is a pure project and does not integrate any case examples that is 
 + Automatically add prefixes to CSS codes to adapt styles to different browsers
 + Supports development with JSX/TSX
 + 
-## 🦀 Ready
+## Ready
     # clone project
-    git clone https://github.com/1esse/vue-clownfish-admin-elem.git
+    git clone https://github.com/mirfut/vue-admin-elem.git
     
     # enter the project directory
-    cd vue-clownfish-admin-elem
+    cd vue-admin-elem
     
     # install dependency
     npm install # use npm
@@ -70,18 +70,12 @@ This project is a pure project and does not integrate any case examples that is 
     npm run dev # use npm
     yarn dev # use yarn
 
-## 🐠 Scripts
+## Scripts
 + dev：start development
 + build：build project
 + preview：preview the built project
 
-## 🦐 Preview
-[preview online](https://1esse.github.io/vue-clownfish-admin-elem)
-
-## 🐡 Others
-If you encounter any problems with the project, please submit an [issue](https://github.com/1esse/vue-clownfish-admin/issues/new).
-
-## 🐙 License
+## License
 [MIT License](https://github.com/1esse/vue-clownfish-admin/blob/master/LICENSE)
 
-Copyright	&copy; 2022-present ZhaoJieXin
+Copyright	&copy; author original project ZhaoJieXin
