@@ -31,7 +31,7 @@ Uses
 [vue3](https://vuejs.org/)，
 [pinia](https://pinia.vuejs.org/)，
 [vue-router](https://router.vuejs.org/)，
-[vite](https://vitejs.dev/)，
+[vite](https://vitejs.dev/)
 
 ## Advantage
 + Tech: Use the latest tech stacks of vue3.
