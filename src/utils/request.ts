@@ -28,11 +28,11 @@ request.interceptors.response.use(
     const { code, msg } = response.data
     if (code !== 200) {
       ElMessage({
-        message: `错误码${code}：${msg || '未知错误'}`,
+        message: `error code${code}: ${msg || 'unknown mistake'}`,
         type: 'error',
         duration: 5 * 1000
       })
-      return Promise.reject(new Error(msg || '未知错误'))
+      return Promise.reject(new Error(msg || 'unknown mistake'))
     } else {
       return response
     }

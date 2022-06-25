@@ -26,8 +26,9 @@ function addTab(tab: RouteLocationNormalizedLoaded) {
   if (tab.meta?.hidden) return
   if (tabs.value.every(route => route.path !== tab.path)) {
     /**
-     * 参数传进来的meta是递归合并后的结果，此处需要找出属于该路由的meta
-     * 详情见：https://router.vuejs.org/zh/guide/advanced/meta.html
+     * The meta passed in by the parameter is the result of recursive merging. 
+     * Here you need to find out the meta belonging to the route
+     * For details, see：https://router.vuejs.org/guide/advanced/meta.html
      */
     tabs.value.push({ ...tab, meta: tab.matched.find(item => item.path === tab.path)?.meta || {} })
   }
@@ -36,7 +37,7 @@ function addTab(tab: RouteLocationNormalizedLoaded) {
   })
 }
 
-let lastTabIndex = 0 // 记录上一次标签索引，用于计算与新标签的位置信息
+let lastTabIndex = 0 // Record the last label index, used to calculate the position information with the new label
 function moveToTab(tab: RouteLocationNormalizedLoaded) {
   const tabIndex = tabs.value.findIndex(item => item.path === tab.path)
   if (tabIndex === lastTabIndex) return
@@ -101,7 +102,7 @@ function closeOtherTabs(saveTab: RouteLocationNormalizedLoaded) {
 }
 
 function showTabMenu(e: MouseEvent, tab: RouteLocationNormalizedLoaded) {
-  // 获取位置信息
+  // Get location information
   const { clientX, clientY } = e
   if (!menuPanelDom.value) return
   menuPanelDom.value.hidePanel()
@@ -120,7 +121,7 @@ function showTabMenu(e: MouseEvent, tab: RouteLocationNormalizedLoaded) {
           <SvgIcon v-if="typeof tab.meta.icon === 'string'" :icon-name="(tab.meta.icon as string)"></SvgIcon>
           <component v-else :is="tab.meta.icon"></component>
         </ElIcon>
-        <span style="margin: 0 5px">{{ tab.meta.title || '无标题' }}</span>
+        <span style="margin: 0 5px">{{ tab.meta.title || 'Untitled' }}</span>
         <ElIcon class="icon-tab-close" @click.prevent="closeTab(tab)">
           <Close />
         </ElIcon>
@@ -132,25 +133,25 @@ function showTabMenu(e: MouseEvent, tab: RouteLocationNormalizedLoaded) {
       <ElIcon>
         <RefreshLeft />
       </ElIcon>
-      <span>刷新</span>
+      <span>refresh</span>
     </ElButton>
     <ElButton text plain @click="closeTab(menuPanelDom?.getContext())">
       <ElIcon>
         <Close />
       </ElIcon>
-      <span>关闭</span>
+      <span>closure</span>
     </ElButton>
     <ElButton text plain @click="closeOtherTabs(menuPanelDom?.getContext())">
       <ElIcon>
         <Close />
       </ElIcon>
-      <span>关闭其他</span>
+      <span>close other</span>
     </ElButton>
     <ElButton text plain @click="closeAllTabs()">
       <ElIcon>
         <Close />
       </ElIcon>
-      <span>关闭所有</span>
+      <span>close all</span>
     </ElButton>
   </MenuPanel>
 </template>

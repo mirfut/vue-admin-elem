@@ -21,7 +21,7 @@ function refreshBreadCrumb(route: RouteLocationNormalizedLoaded) {
     routeMatched.value.unshift(<RouteLocationMatched>{
       path: '/dashboard',
       name: 'Dashboard',
-      meta: { title: '首页', icon: 'dashboard' }
+      meta: { title: 'Front page', icon: 'dashboard' }
     })
   }
 }

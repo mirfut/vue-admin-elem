@@ -6,7 +6,7 @@ import SideBar from './SideBar.vue'
 import TabsBar from './TabsBar.vue'
 import isMobile from '@/composables/isMobile'
 import Shadow from '@/components/Shadow.vue'
-import Logo from '@/assets/logo.png'
+import Logo from '@/assets/logo_company.png'
 
 const _isMobile = isMobile()
 const sidebarRelated = reactive<Layout.SidebarRelated>({
@@ -33,7 +33,7 @@ function setSidebarCollapsed() {
   sidebarRelated.collapsed = _isMobile.value
 }
 
-// 为子组件提供布局的相关状态信息
+// Provides layout-related state information for child components
 provide('sidebarRelated', sidebarRelated)
 provide('keepAlivePages', keepAlivePages.value)
 provide('loading', loading)

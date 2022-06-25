@@ -1,18 +1,18 @@
 const users: ({ username: string, password: string } & Stores.user)[] = [
   {
-    username: 'david',
+    username: 'firstuser',
     password: '123456',
-    name: '大卫',
-    age: 18,
+    name: 'First user',
+    age: 23,
     sex: 'male',
-    token: 'davidToken'
+    token: 'firstuserToken'
   }, {
-    username: 'lili',
+    username: 'seconduser',
     password: '123456',
-    name: '莉莉',
-    age: 16,
+    name: 'Second user',
+    age: 49,
     sex: 'female',
-    token: 'liliToken'
+    token: 'seconduserToken'
   },
 ]
 
@@ -23,7 +23,7 @@ export default <MockApi.obj[]>[
     response: (options) => {
       const failRes: MockApi.response = {
         code: 200,
-        msg: '登陆失败',
+        msg: 'failed to login',
         data: null
       }
       if (!options.body) return failRes
@@ -32,7 +32,7 @@ export default <MockApi.obj[]>[
       if (!user || user.password !== password) return failRes
       return {
         code: 200,
-        msg: '登录成功',
+        msg: 'login successful',
         data: user
       }
     }
@@ -42,7 +42,7 @@ export default <MockApi.obj[]>[
     type: 'get',
     response: {
       code: 200,
-      msg: '登出成功',
+      msg: 'Logout succeeded',
       data: 'logout success'
     }
   },
@@ -52,17 +52,17 @@ export default <MockApi.obj[]>[
     response: (options) => {
       const failRes: MockApi.response = {
         code: 200,
-        msg: '获取用户失败',
+        msg: 'Failed to get user',
         data: null
       }
-      // 获取token
+      // get token
       const token = options.url.slice(options.url.indexOf('=') + 1)
       if (!token) return failRes
       const user = users.find(user => user.token === token)
       if (!user) return failRes
       return {
         code: 200,
-        msg: '获取用户信息成功',
+        msg: 'Obtain user information successfully',
         data: user
       }
     }

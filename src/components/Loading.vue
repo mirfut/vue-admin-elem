@@ -4,7 +4,7 @@ import loadingGif from '@/assets/loading.gif'
 
 <template>
   <div class="loading-wrapper">
-    <img class="loading-gif" :src="loadingGif" alt="加载中...">
+    <img class="loading-gif" :src="loadingGif" alt="Loading...">
   </div>
 </template>
 

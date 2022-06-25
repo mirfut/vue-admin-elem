@@ -7,27 +7,31 @@ import type { RouteRecordRaw } from 'vue-router'
 declare module 'vue-router' {
   interface RouteMeta {
     /**
-     * title：菜单名
+     * title：menu name
      */
     title?: string
     /**
-     * icon：菜单图标，值为src/svgs文件夹下相同的名称或者antd图标组件，当值为组件时需要显式导入，并且需要markRow
+     * icon：Menu icon, the value is the same name in the src/svgs folder or the antd 
+     * icon component. When the value is a component, it needs to be imported explicitly, 
+     * and markRow is required
      */
     icon?: Component | string
     /**
-     * external：是否外部链接，外部链接时需在redirect指定链接地址
+     * external：Whether it is an external link, the link address needs to be specified 
+     * in redirect when external linking
      */
     external?: boolean
     /**
-     * breadcrumb：是否显示面包屑，默认true
+     * breadcrumb：Whether to display breadcrumbs, default true
      */
     breadcrumb?: boolean
     /**
-     * hidden：是否在菜单隐藏
+     * hidden：whether to hide in the menu
      */
     hidden?: boolean
     /**
-     * keepAlive：是否缓存该路由，只有当页面定义的name和路由定义的name一致时，才能生效
+     * keepAlive：Whether to cache the route, it will take effect only when the name 
+     * defined by the page is the same as the name defined by the route
      */
     keepAlive?: boolean
   }
@@ -43,7 +47,7 @@ const dashboardRoute: RouteRecordRaw = {
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard.vue'),
-      meta: { title: '首页', icon: 'dashboard' }
+      meta: { title: 'front page', icon: 'dashboard' }
     }
   ]
 }
@@ -52,7 +56,7 @@ const constantRoutes: RouteRecordRaw[] = [
   {
     path: '/redirect',
     component: Layout,
-    meta: { hidden: true, title: '页面跳转' },
+    meta: { hidden: true, title: 'page jump' },
     children: [
       {
         path: '/redirect/:path(.*)',
@@ -77,7 +81,7 @@ const routes: RouteRecordRaw[] = [
     path: '/login',
     name: 'Login',
     component: () => import('@/views/login.vue'),
-    meta: { hidden: true, title: '登录' }
+    meta: { hidden: true, title: 'Log in' }
   },
   {
     path: '/modal',
@@ -90,7 +94,7 @@ const routes: RouteRecordRaw[] = [
         path: 'index',
         name: 'ModalIndex',
         component: () => import('@/views/modal.vue'),
-        meta: { title: '模态框', icon: 'dashboard' }
+        meta: { title: 'modal box', icon: 'dashboard' }
       }
     ]
   },

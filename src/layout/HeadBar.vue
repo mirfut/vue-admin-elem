@@ -29,7 +29,7 @@ function logout() {
     </section>
     <section>
       <span style="margin-right: 1rem">{{ user.name }}</span>
-      <ElButton type="primary" :icon="ArrowRightBold" circle :loading="loading?.logout" @click="logout" title="退出登录">
+      <ElButton type="primary" :icon="ArrowRightBold" circle :loading="loading?.logout" @click="logout" title="sign out">
       </ElButton>
     </section>
   </header>

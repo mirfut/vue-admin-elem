@@ -1,8 +1,8 @@
 /**
- * @param key cookie的键
- * @param value cookie的值
- * @param expires cookie的过期时间（天数），不传则关闭会话后失效，传参为负数则清除该cookie
- * @param path cookie生效路径范围，默认"/"全局生效
+ * @param key cookie key
+ * @param value the value of the cookie
+ * @param expires The expiration time (days) of the cookie
+ * @param path Cookie effective path range, the default "/" global effective
  */
 export function setCookie(key: string, value: string | number, expires: number = 0, path: string = '/') {
   let cookie = `${key}=${value};path=${path}`
@@ -15,8 +15,8 @@ export function setCookie(key: string, value: string | number, expires: number =
 }
 
 /**
- * @param key cookie的键
- * @returns cookie的值
+ * @param key cookie key
+ * @returns the value of the cookie
  */
 export function getCookie(key: string) {
   const reg = new RegExp("(^| )" + key + "=([^;]+)")
@@ -29,7 +29,7 @@ export function removeCookie(key: string) {
 }
 
 /**
- * @param ms 睡眠时间（毫秒）
+ * @param ms Sleep time (ms)
  * @returns Promise<unknown>
  */
 export function sleep(ms: number) {

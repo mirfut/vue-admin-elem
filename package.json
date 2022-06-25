@@ -1,11 +1,11 @@
 {
-  "name": "clown-fish-admin-elem",
+  "name": "vue-admin-elem",
   "author": {
-    "name": "ZhaoJieXin",
-    "email": "572116385@qq.com",
-    "url": "https://1esse.github.io/vue-clownfish-admin/"
+    "name": "Tim",
+    "email": "mirfut@gmail.com",
+    "url": "https://mirfut.net"
   },
-  "version": "1.0.7",
+  "version": "0.0.1",
   "private": "true",
   "scripts": {
     "dev": "vite",

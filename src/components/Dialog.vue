@@ -33,9 +33,10 @@ const emit = defineEmits<{
 }>()
 
 function shadowClick() {
-  // 如果显示关闭按钮（手机端会自动隐藏关闭按钮，关闭劝流转到点击阴影）
+  // If the close button is displayed (the close button will be automatically 
+  // hidden on the mobile phone, close the persuasion flow and turn to the click shadow)
   if (props.showClose) {
-    // 且不是在手机端，则把关闭权交给关闭按钮
+    // And not on the mobile phone, then give the close right to the close button
     if (!_isMobile.value && props.preventShadowEvent) return
   }
   emit('update:show', false)

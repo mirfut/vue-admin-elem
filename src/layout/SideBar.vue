@@ -1,11 +1,11 @@
 <script setup lang="tsx">
-// tsx不会需要手动导入
+// tsx won't need to be imported manually
 import 'element-plus/es/components/menu/style/css'
 import 'element-plus/es/components/menu-item/style/css'
 import 'element-plus/es/components/sub-menu/style/css'
 import { ref, h, watch, inject, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { resolve } from 'pathe' // path包es代码实现
+import { resolve } from 'pathe' // path package es code implementation
 import Scrollbar from '../components/Scrollbar.vue'
 import { RouterLink } from 'vue-router'
 import type { Component, Slots } from 'vue'
@@ -15,12 +15,12 @@ import SvgIcon from '../components/SvgIcon.vue'
 
 const router = useRouter()
 const route = useRoute()
-const defaultActive = ref<string>(route.path) // 菜单默认选中项
+const defaultActive = ref<string>(route.path) // menu default selection
 const defaultOpeneds = ref<string[]>(
   router.getRoutes()
     .filter(matchedRoute => matchedRoute.children.length > 0 && /^\/\w+?$/.test(matchedRoute.path))
     .map(matchedRoute => matchedRoute.path)
-) // 子菜单默认展开项
+) // Submenu default expansion item
 
 const sidebarRelated = inject<Layout.SidebarRelated>('sidebarRelated')
 const keepAlivePages = inject<Layout.keepAlivePages>('keepAlivePages')
@@ -30,7 +30,7 @@ const routesList = computed(() => {
 
 watch(route, (currentRoute) => {
   defaultActive.value = currentRoute.path
-  // 如果该路由设置页面缓存则推进缓存组
+  // Push cache group if this route sets page cache
   if (currentRoute.meta.keepAlive && !keepAlivePages?.has(currentRoute.name as string)) {
     keepAlivePages?.add(currentRoute.name as string)
   }
@@ -53,7 +53,7 @@ const MenuItemLink = (props: { route: RouteRecordRaw, url: string }, { slots }: 
 }
 
 const MenuItemNav = (props: { route: RouteRecordRaw, basePath: string }) => {
-  // 子菜单模板
+  // Submenu Template
   const subMenuTemplate = (route: RouteRecordRaw) => {
     const slots = {
       title: () => (
@@ -70,7 +70,7 @@ const MenuItemNav = (props: { route: RouteRecordRaw, basePath: string }) => {
       </ElSubMenu>
     )
   }
-  // 菜单项模板
+  // menu item template
   const menuItemTemplate = (route: RouteRecordRaw) => {
     const slots = {
       title: () => (

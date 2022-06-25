@@ -26,21 +26,21 @@ function showDialog(transition: transitionType) {
     <Dialog v-model:show="dialogs.dialog1.show" :loading="dialogs.dialog1.loading"
       :transition="dialogs.dialog1.transition">
       <template #modalHeader>
-        <div style="height: 3rem; background-color: aquamarine;">模态框头部</div>
+        <div style="height: 3rem; background-color: aquamarine;">modal header</div>
       </template>
-      <div style="width: 100%; height: 50rem;  background-color: lightblue;">
-        模态框内容
+      <div style="width: 100%; height: 80%;  background-color: lightblue;">
+        Modal box content
       </div>
       <template #modalFooter>
-        <div style="height: 3rem; background-color: bisque;">模态框底部</div>
+        <div style="height: 3rem; background-color: bisque;">bottom of modal</div>
       </template>
     </Dialog>
-    <ElButton @click="showDialog('fade')">fade模态框</ElButton>
-    <ElButton @click="showDialog('fade-scale')">fade-scale模态框</ElButton>
-    <ElButton @click="showDialog('slide-up')">slide-up模态框</ElButton>
-    <ElButton @click="showDialog('slide-down')">slide-down模态框</ElButton>
-    <ElButton @click="showDialog('slide-left')">slide-left模态框</ElButton>
-    <ElButton @click="showDialog('slide-right')">slide-right模态框</ElButton>
+    <ElButton @click="showDialog('fade')">fade modal</ElButton>
+    <ElButton @click="showDialog('fade-scale')">fade-scale modal</ElButton>
+    <ElButton @click="showDialog('slide-up')">slide-up modal</ElButton>
+    <ElButton @click="showDialog('slide-down')">slide-down modal</ElButton>
+    <ElButton @click="showDialog('slide-left')">slide-left modal</ElButton>
+    <ElButton @click="showDialog('slide-right')">slide-right modal</ElButton>
   </div>
 </template>
 

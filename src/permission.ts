@@ -12,12 +12,12 @@ const whitelist: string[] = ['/login', '/404']
 
 router.beforeEach(async (to, from, next) => {
   NProgress.start()
-  // 设置页面标题
+  // set page title
   document.title = `${to.meta.title}-${appTitle}`
-  // 路径命中白名单，放行通过
+  // The path hits the whitelist and is allowed to pass
   if (whitelist.includes(to.path)) next()
   else {
-    // 判断是否有token
+    // Determine if there is a token
     const token = getCookie('token')
     const user = userStore()
     if (!token) {
@@ -27,8 +27,8 @@ router.beforeEach(async (to, from, next) => {
         await user.getUserInfo(token)
         next()
       } catch (_) {
-        ElMessage.error('token失效，请重新登录')
-        removeCookie('token') // 清除cookie
+        ElMessage.error('The token is invalid, please log in again')
+        removeCookie('token') // clear cookies
         next('/login')
       }
     } else {

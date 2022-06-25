@@ -1,21 +1,22 @@
 /**
- * app标题
+ * app title
  */
-export const appTitle = 'ClownFish Admin'
+export const appTitle = 'Admin panel'
 
 /**
- * 使用mock代理api请求：on开，off关  
+ * Use mock to proxy api requests: on, off  
  */
 export const mock: SwitchType = 'on'
 
 /**
- * mock是否开启namespace，开启后文件名将作为前缀拼接在url
+ * Whether mock has namespace enabled, the file name will be spliced
+ * into the url as a prefix after it is enabled
  */
 export const mockNamespace: boolean = true
 
 /**
- * mock代理指定环境
- * 只在开发环境且appConfig的mock字段为‘on’的情况启动mock，
- * 由于线上预览需要，这里不限制环境
+ * mock proxy specified environment
+ * Only start the mock in the development environment and the mock field of appConfig is 'on',
+ * Due to the need for online preview, the environment is not limited here
  */
 export const mockEnv: envType[] = ['development', 'staging', 'production']

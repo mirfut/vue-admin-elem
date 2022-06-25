@@ -1,18 +1,18 @@
 /**
- * 开关类型：on开 off关
+ * Switch type: on off
  */
 type SwitchType = 'on' | 'off'
 
 /**
- * 环境类型 
+ * type of environment
  * 
- * development：开发环境；
- * staging：预发布环境；
- * production：生产环境；
+ * development: development environment;
+ * staging: pre-release environment;
+ * production: production environment;
  */
 type envType = 'development' | 'staging' | 'production'
 
 /**
- * 动画类型
+ * type of animation
  */
 type transitionType = 'fade' | 'fade-scale' | 'slide-left' | 'slide-right' | 'slide-up' | 'slide-down'

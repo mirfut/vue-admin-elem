@@ -17,7 +17,7 @@ interface LoginForm {
 
 const refForm = ref<ComponentPublicInstance<FormInstance> | null>(null)
 const form = reactive<LoginForm>({
-  username: 'david',
+  username: 'firstuser',
   password: '123456',
   showPassword: false,
   remember: true
@@ -48,7 +48,7 @@ function login() {
     <section class="login-wrapper">
       <h2 class="title">{{ appTitle }} Login</h2>
       <el-form ref="refForm" label-width="0" :model="form" class="login-form shadow" size="large">
-        <el-form-item prop="username" :rules="[{ required: true, message: '用户名不能为空!' }]">
+        <el-form-item prop="username" :rules="[{ required: true, message: 'Username can not be empty!' }]">
           <el-input v-model="form.username">
             <template #prefix>
               <el-icon size="1.1rem">
@@ -57,7 +57,7 @@ function login() {
             </template>
           </el-input>
         </el-form-item>
-        <el-form-item prop="password" :rules="[{ required: true, message: '密码不能为空!' }]">
+        <el-form-item prop="password" :rules="[{ required: true, message: 'Password can not be blank!' }]">
           <el-input v-model="form.password" :type="form.showPassword ? 'text' : 'password'">
             <template #prefix>
               <el-icon size="1.1rem">
@@ -73,9 +73,9 @@ function login() {
           </el-input>
         </el-form-item>
         <el-form-item prop="remember" style="margin-bottom: .5rem;">
-          <el-checkbox v-model="form.remember" label="记住我" />
+          <el-checkbox v-model="form.remember" label="remember me" />
         </el-form-item>
-        <ElButton type="primary" style="width: 100%;" size="large" :loading="loading.login" @click="login">登录
+        <ElButton type="primary" style="width: 100%;" size="large" :loading="loading.login" @click="login">Enter
         </ElButton>
       </el-form>
     </section>

@@ -1,10 +1,14 @@
+<script lang="ts" setup>
+import page404Png from '@/assets/page_404.png'
+</script>
+
 <template>
   <ElResult title="404" sub-title="Sorry, request error">
     <template #icon>
-      <ElImage src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" />
+      <ElImage :src="page404Png" alt="Page 404"/>
     </template>
     <template #extra>
-      <ElButton type="primary">Back</ElButton>
+      <ElButton type="primary" @click="$router.go(-1)">Back</ElButton>
     </template>
   </ElResult>
 </template>

@@ -19,7 +19,7 @@ function collectApis(): MockApi.obj[] {
 }
 
 /**
- * @param timeout 接口响应时间范围:毫秒(ms)，默认'100-1000'
+ * @param timeout Interface response time range: milliseconds (ms), default '100-1000'
  * https://github.com/nuysoft/Mock/wiki/Mock.setup()#timeout
  */
 function enableMock(timeout: string | number = '100-1000') {
