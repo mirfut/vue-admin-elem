@@ -6,8 +6,7 @@ import { ElMessage } from "element-plus"
 export const userStore = defineStore('user', {
   state: (): Stores.user => ({
     name: '',
-    age: null,
-    sex: 'unknown',
+    uuidid: '',
     token: ''
   }),
   actions: {
@@ -18,9 +17,8 @@ export const userStore = defineStore('user', {
         }).then(res => {
           const { data, msg } = res.data
           if (data) {
-            this.name = data.name
-            this.age = data.age
-            this.sex = data.sex
+            this.name = data.fullnameinitials
+            this.uuidid = data.uuidid
             this.token = `${data.username}Token`
             setCookie('token', this.token)
             resolve(msg)
@@ -49,9 +47,8 @@ export const userStore = defineStore('user', {
         }).then(res => {
           const { data, msg } = res.data
           if (data) {
-            this.name = data.name
-            this.age = data.age
-            this.sex = data.sex
+            this.name = data.fullnameinitials
+            this.uuidid = data.uuidid
             this.token = `${data.username}Token`
             setCookie('token', this.token)
             resolve(msg)

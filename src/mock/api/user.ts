@@ -1,17 +1,15 @@
 const users: ({ username: string, password: string } & Stores.user)[] = [
   {
-    username: 'firstuser',
+    username: 'mirfut',
     password: '123456',
     name: 'First user',
-    age: 23,
-    sex: 'male',
-    token: 'firstuserToken'
+    uuidid: '276d94bf-77d2-49fb-bb6a-78f7a59e80f8',
+    token: 'mirfutToken'
   }, {
     username: 'seconduser',
     password: '123456',
     name: 'Second user',
-    age: 49,
-    sex: 'female',
+    uuidid: '2bddf91a-35c3-4620-9456-a29c074e028b',
     token: 'seconduserToken'
   },
 ]

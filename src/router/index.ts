@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from "vue-router"
+import { createRouter, createWebHashHistory, createWebHistory } from "vue-router"
 import Layout from '@/layout/index.vue'
 import { CoffeeCup, Link } from '@element-plus/icons-vue'
 import { Component, markRaw } from "vue"
@@ -37,17 +37,17 @@ declare module 'vue-router' {
   }
 }
 
-const dashboardRoute: RouteRecordRaw = {
+const indexRoute: RouteRecordRaw = {
   path: '/',
   component: Layout,
-  redirect: '/dashboard',
+  redirect: '/index',
   meta: { breadcrumb: false },
   children: [
     {
-      path: 'dashboard',
-      name: 'Dashboard',
-      component: () => import('@/views/dashboard.vue'),
-      meta: { title: 'front page', icon: 'dashboard' }
+      path: 'index',
+      name: 'index',
+      component: () => import('@/views/index.vue'),
+      meta: { title: 'Index', icon: 'house' }
     }
   ]
 }
@@ -119,8 +119,9 @@ function markRawWrap(routes: RouteRecordRaw[]) {
 }
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
-  routes: markRawWrap([dashboardRoute, ...routes, ...constantRoutes])
+  //history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: markRawWrap([indexRoute, ...routes, ...constantRoutes])
 })
 
 export default router

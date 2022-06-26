@@ -15,7 +15,8 @@ function resolvePath(src: string) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
+  // access control system (acs)
+  base: '/acs',
   plugins: [
     vue(),
     vueJsx(),

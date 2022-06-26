@@ -17,11 +17,11 @@ watch(route, refreshBreadCrumb)
 function refreshBreadCrumb(route: RouteLocationNormalizedLoaded) {
   routeMatched.value = route.matched.filter((item) => item.meta.breadcrumb !== false && !item.meta.hidden)
   if (routeMatched.value.length === 0) return
-  if (routeMatched.value[0].path !== '/dashboard') {
+  if (routeMatched.value[0].path !== '/index') {
     routeMatched.value.unshift(<RouteLocationMatched>{
-      path: '/dashboard',
-      name: 'Dashboard',
-      meta: { title: 'Front page', icon: 'dashboard' }
+      path: '/index',
+      name: 'index',
+      meta: { title: 'Index', icon: 'house' }
     })
   }
 }

@@ -8,7 +8,7 @@ export default defineComponent({
     onBeforeMount(() => {
       const { params, query } = router.currentRoute.value
 
-      router.replace({ path: '/' + (params.path || 'dashboard'), query })
+      router.replace({ path: '/' + (params.path || 'index'), query })
     })
     return () => h('span')
   }

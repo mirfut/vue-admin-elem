@@ -6,7 +6,7 @@ export const appTitle = 'Admin panel'
 /**
  * Use mock to proxy api requests: on, off  
  */
-export const mock: SwitchType = 'on'
+export const mock: SwitchType = 'off'
 
 /**
  * Whether mock has namespace enabled, the file name will be spliced

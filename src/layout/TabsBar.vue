@@ -79,14 +79,14 @@ function closeTab(tab: RouteLocationNormalizedLoaded) {
       router.replace({ path, query })
     }
   } else {
-    router.replace('/redirect/dashboard')
+    router.replace('/redirect/index')
   }
 }
 
 function closeAllTabs() {
   keepAlivePages?.clear()
   tabs.value = []
-  router.replace('/redirect/dashboard')
+  router.replace('/redirect/index')
 }
 
 function closeOtherTabs(saveTab: RouteLocationNormalizedLoaded) {
