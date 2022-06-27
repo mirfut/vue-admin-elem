@@ -2,7 +2,7 @@ declare module Stores {
   interface user {
     name: string
     uuidid: string
-    token?: string
+    token: string
   };
 
   interface employee {

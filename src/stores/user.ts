@@ -7,7 +7,7 @@ export const userStore = defineStore('user', {
   state: (): Stores.user => ({
     name: '',
     uuidid: '',
-    token: ''
+    token: '',
   }),
   actions: {
     async login(username: string, password: string) {
@@ -16,10 +16,12 @@ export const userStore = defineStore('user', {
           username, password
         }).then(res => {
           const { data, msg } = res.data
+          console.log(data)
+          console.log(msg)
           if (data) {
             this.name = data.fullnameinitials
             this.uuidid = data.uuidid
-            this.token = `${data.username}Token`
+            this.token = data.token
             setCookie('token', this.token)
             resolve(msg)
           } else {
@@ -49,7 +51,7 @@ export const userStore = defineStore('user', {
           if (data) {
             this.name = data.fullnameinitials
             this.uuidid = data.uuidid
-            this.token = `${data.username}Token`
+            this.token = data.token
             setCookie('token', this.token)
             resolve(msg)
           } else {
